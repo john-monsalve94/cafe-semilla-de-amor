@@ -1,0 +1,53 @@
+{
+  "PHONE": "573135827664",
+  "HOURS": {
+    "0": null,
+    "1": [
+      8.5,
+      19.5
+    ],
+    "2": [
+      8.5,
+      19.5
+    ],
+    "3": [
+      8.5,
+      19.5
+    ],
+    "4": [
+      8.5,
+      19.5
+    ],
+    "5": [
+      8.5,
+      19.5
+    ],
+    "6": [
+      11,
+      19
+    ]
+  },
+  "DAYS": [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado"
+  ],
+  "HOUSE": [
+    {
+      "n": "Capuchino Semilla de Amor",
+      "icon": "<svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M12 28 H48 V36 C48 48 40 54 30 54 C20 54 12 48 12 36Z\"/><path d=\"M48 32 C58 32 58 46 47 47\"/><path d=\"M30 38 C24 33 25 28 29 29 C30 29 30 30 30 31 C30 30 31 29 32 29 C36 28 36 33 30 38Z\" class=\"fw\"/><path d=\"M22 20 C18 15 26 13 22 8\"/><path d=\"M34 20 C30 15 38 13 34 8\"/></svg>"
+    },
+    {
+      "n": "Latte Semilla de Amor",
+      "icon": "<svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M20 10 H44 L41 54 H23Z\"/><path d=\"M22 28 H42\"/><path d=\"M22.5 40 H41.5\" /><path d=\"M32 4 V10\"/><path d=\"M26 16 H38\" /></svg>"
+    },
+    {
+      "n": "Granizado Semilla de Amor",
+      "icon": "<svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M14 22 H50 L45 54 H19Z\"/><path d=\"M12 22 C14 12 22 10 32 12 C42 10 50 12 52 22\"/><path d=\"M38 4 L32 22\"/><path d=\"M22 34 C28 30 34 38 42 34\"/></svg>"
+    }
+  ]
+}

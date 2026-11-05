@@ -1,0 +1,18 @@
+/* Portada */
+.hero{position:relative;background:radial-gradient(110% 90% at 82% 25%,#7A2430 0%,#58111A 40%,#3A0A10 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:var(--beans) center/cover;opacity:.1}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding-block:clamp(3rem,7vw,5.5rem) clamp(4rem,8vw,6.5rem)}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-weight:500;font-size:.85rem;padding:.4rem .95rem;border:1px solid rgba(255,255,255,.35);border-radius:99px;background:rgba(255,255,255,.08)}
+.dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--closed)}
+.status.open .dot{background:#6CE09A;box-shadow:0 0 0 4px rgba(108,224,154,.25)}
+.hero h1{font-size:clamp(2.7rem,7vw,5.2rem);font-weight:800;margin-block:1.1rem 1.1rem;letter-spacing:-.01em}
+.hero h1 em{color:var(--gold-soft)}
+.hero .lead{font-size:1.1rem;opacity:.9;max-width:44ch}
+.hero .cta{display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap}
+.hero .mini{margin-top:1.6rem;font-size:.85rem;opacity:.8}
+.badge-wrap{position:relative;width:min(460px,100%);aspect-ratio:1;margin:0 auto}
+.badge-wrap > svg{width:100%;height:100%;display:block}
+.fl{position:absolute;pointer-events:none;transition:transform .25s ease-out}
+.fl svg{display:block;width:100%;height:auto}
+.ring-text{font-family:var(--f-body);font-weight:600;font-size:21px;fill:#F4DDB0;letter-spacing:.1em}
+

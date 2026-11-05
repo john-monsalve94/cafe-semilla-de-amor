@@ -1,0 +1,8 @@
+/* Nosotros */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:2.4rem;align-items:center}
+.about p{color:var(--muted)}
+.about p + p{margin-top:.9rem}
+.tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+.tags span{border:1.5px solid var(--wine);color:var(--wine);border-radius:99px;padding:.2rem .85rem;font-size:.82rem;font-weight:500}
+.about .logo-big{width:min(300px,100%);aspect-ratio:1;margin:0 auto;border-radius:50%;box-shadow:0 20px 50px rgba(88,17,26,.25);display:block}
+

@@ -1,0 +1,121 @@
+[
+ {
+  "id": "tambo",
+  "name": "Castillo · Tambo",
+  "chip": "Edición Tambo",
+  "process": "Suave lavado · Finca El Diamante · 1.700 m s. n. m. · molido o en grano",
+  "aroma": "Vainilla, miel, panela, chocolate",
+  "acidez": "Cítrica",
+  "notas": [
+   "Panela",
+   "Miel",
+   "Vainilla",
+   "Chocolate"
+  ],
+  "band": "#4B3621",
+  "prices": {
+   "250": 22000,
+   "500": 40000
+  },
+  "img": "images/cafes/et-tambo.jpg"
+ },
+ {
+  "id": "bourbon",
+  "name": "Bourbon Rosado · Tambo",
+  "chip": "Línea premium",
+  "process": "Suave lavado · Finca El Diamante · 1.700 m s. n. m. · molido o en grano",
+  "aroma": "Especiado, frutos amarillos, panela",
+  "acidez": "Cítrica",
+  "notas": [
+   "Panela",
+   "Especiado",
+   "Frutos amarillos",
+   "Naranja"
+  ],
+  "band": "#58111A",
+  "prices": {
+   "250": 35000
+  },
+  "img": "images/cafes/et-bourbon.jpg"
+ },
+ {
+  "id": "blend",
+  "name": "Blend Castillo · Tabi · Piendamó",
+  "chip": "Proceso natural",
+  "process": "Natural, 220 horas de fermentación · Finca La Facari · 1.790 m s. n. m. · molido o en grano",
+  "aroma": "Chocolate, cacao, licor de naranja, maracuyá",
+  "acidez": "Tartárica",
+  "notas": [
+   "Licor de naranja",
+   "Cacao",
+   "Panela",
+   "Maracuyá"
+  ],
+  "band": "#7A2430",
+  "prices": {
+   "250": 35000,
+   "350": 55000,
+   "500": 65000
+  },
+  "img": "images/cafes/et-blend.jpg"
+ },
+ {
+  "id": "tipica",
+  "name": "Típica · Sahumadora",
+  "chip": "Línea exclusiva · Nuevo",
+  "process": "Black Honey · mucílago al 100%",
+  "aroma": "Afrutado, pera, azúcar morena, floral, manzanilla",
+  "acidez": "",
+  "notas": [
+   "Azúcar morena",
+   "Manzanilla",
+   "Frutos rojos"
+  ],
+  "band": "#B8913A",
+  "prices": {
+   "250": 40000
+  },
+  "img": "images/cafes/et-tipica.jpg"
+ },
+ {
+  "id": "lychee",
+  "name": "Castillo Lychee",
+  "chip": "Línea exclusiva",
+  "process": "Doble fermentación anaeróbica con choque térmico · 72 horas · Finca El Paraíso · 1.920 m s. n. m.",
+  "aroma": "Lichi, caramelo, frutas amarillas",
+  "acidez": "",
+  "notas": [
+   "Lichi",
+   "Caramelo",
+   "Frutas amarillas"
+  ],
+  "band": "#9B3A4A",
+  "prices": {
+   "250": 60000
+  },
+  "img": "images/cafes/et-lychee.jpg"
+ },
+ {
+  "id": "geisha",
+  "name": "Geisha · La Sierra",
+  "chip": "Edición mujeres",
+  "process": "Suave lavado · 72 horas de fermentación · Finca El Colibrí · 1.780 m s. n. m. · 87 puntos",
+  "aroma": "Manzanilla, limoncillo, floral, miel, chocolate",
+  "acidez": "Cítrica",
+  "notas": [
+   "Manzanilla",
+   "Limoncillo",
+   "Floral",
+   "Naranja",
+   "Cítricos"
+  ],
+  "band": "#B8913A",
+  "prices": {
+   "125": 22000,
+   "250": 50000,
+   "350": 60000,
+   "500": 78000
+  },
+  "img": "images/cafes/et-geisha.jpg"
+ }
+]

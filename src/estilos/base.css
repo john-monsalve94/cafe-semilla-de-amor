@@ -1,0 +1,40 @@
+/* Estilos del sitio. Los colores y tamaños base están al inicio, en :root */
+/* Concepto: "De la semilla a la taza". Portada con insignia giratoria alrededor del logo, cinta de texto en movimiento, recorrido ilustrado en cuatro pasos, catálogo en riel, pedido con tiquete, carta con buscador, talleres sobre vino tinto y pie con la marca en grande. Fondo blanco y paleta de la marca. */
+:root{
+  --bg:#FFFFFF; --band:#F8F3EF; --ink:#000000; --muted:#4B3621; --brown:#4B3621;
+  --wine:#58111A; --wine-mid:#7A2430; --wine-deep:#3A0A10; --blush:#F4E7E8; --line:#E7DBD3;
+  --gold:#B8913A; --gold-soft:#E7C777;
+  --ok:#2F7A4B; --closed:#E7A08A;
+  --f-display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --f-body:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --radius:18px; --beans:none; --p:0%;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;margin:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:60}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,5vw,3.3rem);color:var(--wine)}
+h2 em,h1 em{font-style:italic;font-weight:600}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section .wrap{padding-block:clamp(3.2rem,8vw,6rem)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+button,input,select{font:inherit;color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--wine);color:#fff;border:0;border-radius:99px;padding:.8rem 1.6rem;font-weight:600;cursor:pointer;text-decoration:none;font-size:.95rem}
+.btn.light{background:#fff;color:var(--wine)}
+.btn.gold{background:var(--gold-soft);color:var(--wine-deep)}
+.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.75)}
+.btn.ghost{background:transparent;color:var(--wine);border:1.5px solid var(--wine)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:600;color:var(--gold)}
+.head{text-align:center;max-width:62ch;margin:0 auto 2.6rem;display:grid;gap:.8rem}
+.head p{color:var(--muted)}
+.band{background:var(--band)}
+
+/* Revelado al hacer scroll: todo es visible en reposo, la animación solo se dispara al entrar */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.rv.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+

@@ -1,0 +1,32 @@
+[
+ {
+  "id": "tambo",
+  "pregunta": "¿Buscas el sabor auténtico a café?",
+  "texto": "Equilibrado y sin sorpresas amargas. La variedad Castillo, en proceso suave lavado, es para ti."
+ },
+ {
+  "id": "bourbon",
+  "pregunta": "¿Amas la acidez cítrica?",
+  "texto": "Con notas de especias y frutos amarillos. Este Bourbon Rosado cultivado en El Tambo, Cauca, es el café perfecto para ti."
+ },
+ {
+  "id": "blend",
+  "pregunta": "¿Te gustan los cafés fuertes y complejos?",
+  "texto": "Prueba el Blend Castillo · Tabi en proceso natural. Con fermentación larga al estilo del vino, ofrece una taza robusta con notas pronunciadas a frutales, cacao, chocolate y vino."
+ },
+ {
+  "id": "tipica",
+  "pregunta": "¿Amas los cafés dulces?",
+  "texto": "Esta variedad Típica en proceso Black Honey te cautivará con sus notas a azúcar moreno, caramelo y un sutil toque de manzanilla."
+ },
+ {
+  "id": "lychee",
+  "pregunta": "¿Quieres algo exótico?",
+  "texto": "El Castillo Lychee es un café suave, exclusivo y de edición limitada, producido en la Finca El Paraíso (Semilla de Amor), en Piendamó, Cauca. Su fermentación le aporta notas a lichi."
+ },
+ {
+  "id": "geisha",
+  "pregunta": "¿Buscas un café delicado y exclusivo?",
+  "texto": "Descubre este Geisha, cultivado con orgullo por mujeres productoras en la Sierra del Cauca, con notas sofisticadas a limoncillo, manzanilla y té negro."
+ }
+]

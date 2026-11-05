@@ -1,0 +1,23 @@
+/* Catálogo */
+.rail-wrap{position:relative}
+.rail{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .3rem 1.4rem;scrollbar-width:thin;scrollbar-color:var(--wine) var(--blush)}
+.cafe-card{flex:0 0 min(310px,84%);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(88,17,26,.08);transition:transform .25s,box-shadow .25s}
+.cafe-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(88,17,26,.18)}
+.cafe-art{background:radial-gradient(circle at 50% 40%,#7A2430,#3A0A10);padding:1.4rem;display:grid;place-items:center;position:relative}
+.cafe-art svg{width:150px;height:auto;filter:drop-shadow(0 14px 14px rgba(0,0,0,.35))}
+.chip{position:absolute;top:.8rem;left:.8rem;background:var(--gold-soft);color:var(--wine-deep);border-radius:99px;font-size:.7rem;padding:.15rem .75rem;font-weight:600}
+.cafe-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.cafe-body h3{font-size:1.25rem;color:var(--wine)}
+.cafe-body .proc{font-size:.8rem;color:var(--muted)}
+.notes{display:flex;flex-wrap:wrap;gap:.35rem}
+.notes span{background:var(--blush);color:var(--wine);border-radius:99px;font-size:.78rem;padding:.12rem .7rem;font-weight:500}
+.cafe-body dl{margin:0;font-size:.84rem;display:grid;gap:.15rem}
+.cafe-body dt{display:inline;font-weight:600}
+.cafe-body dd{display:inline;margin:0;color:var(--muted)}
+.sizes{display:flex;flex-wrap:wrap;gap:.35rem}
+.sizes span{font-size:.78rem;border:1px solid var(--line);border-radius:8px;padding:.1rem .55rem;font-variant-numeric:tabular-nums}
+.cafe-body .btn{margin-top:auto}
+.rail-btn{position:absolute;top:34%;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--wine);cursor:pointer;font-size:1.5rem;z-index:2;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.rail-btn.prev{left:-10px}.rail-btn.next{right:-10px}
+
+.cafe-art img.etiqueta{height:230px;width:auto;max-width:100%;border-radius:10px;box-shadow:0 14px 24px rgba(0,0,0,.4);background:#fff}

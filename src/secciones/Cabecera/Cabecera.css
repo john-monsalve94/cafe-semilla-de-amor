@@ -1,0 +1,12 @@
+/* Cabecera pegajosa */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{width:50px;height:50px;border-radius:50%;display:block}
+.brand b{font-family:var(--f-display);font-size:1.25rem;color:var(--wine);line-height:1.1}
+nav.main{display:flex;gap:1.5rem;font-weight:500;font-size:.9rem}
+nav.main a{text-decoration:none;color:var(--muted);padding-block:.3rem;border-bottom:2px solid transparent}
+nav.main a:hover,nav.main a[aria-current="true"]{color:var(--wine);border-color:var(--gold)}
+.nav-toggle{display:none;background:transparent;border:1.5px solid var(--wine);color:var(--wine);border-radius:99px;padding:.35rem .9rem;font-weight:600;cursor:pointer}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:var(--p);background:linear-gradient(90deg,var(--gold),var(--wine))}
+

@@ -1,0 +1,16 @@
+/* Talleres */
+.tall{background:radial-gradient(100% 120% at 10% 0%,#7A2430,#3A0A10);color:#fff}
+.tall .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;align-items:start}
+.tall h2{color:#fff}
+.tall h2 em{color:var(--gold-soft)}
+.tall .intro{opacity:.88;margin-block:1rem 1.6rem;max-width:44ch}
+.taller{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:1.1rem 1.3rem;margin-bottom:.9rem}
+.taller h3{font-size:1.2rem}
+.taller .pr{font-family:var(--f-display);font-size:1.5rem;color:var(--gold-soft);font-variant-numeric:tabular-nums}
+.card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:1.7rem;min-width:0}
+.card h3{font-size:1.6rem;color:var(--wine)}
+form.res{display:grid;gap:.8rem;margin-top:1rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.msg{font-size:.9rem;padding:.7rem .9rem;border-left:3px solid var(--wine);background:var(--blush);margin-top:.8rem}
+.note{font-size:.82rem;color:var(--muted)}
+

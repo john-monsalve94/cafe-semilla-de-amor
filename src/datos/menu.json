@@ -1,0 +1,318 @@
+{
+ "Calientes": {
+  "Bebidas calientes": [
+   [
+    "Café negro",
+    4000
+   ],
+   [
+    "Café con leche",
+    5500
+   ],
+   [
+    "Café pintado",
+    6500
+   ],
+   [
+    "Tinto caucano",
+    5000,
+    "Endulzado con panela, clavos y anís estrellado"
+   ],
+   [
+    "Espresso sencillo",
+    6000
+   ],
+   [
+    "Espresso doble",
+    8000
+   ]
+  ],
+  "Café con licor": [
+   [
+    "Carajillo",
+    12000
+   ],
+   [
+    "Affogato Baileys",
+    15000
+   ],
+   [
+    "Irlandés",
+    16000
+   ]
+  ],
+  "Americanos": [
+   [
+    "Americano",
+    6000,
+    "Espresso doble con adición de agua"
+   ],
+   [
+    "Americano especial",
+    9000,
+    "Preparado con los cafés de la línea premium"
+   ]
+  ],
+  "Cafés filtrados": [
+   [
+    "Prensa francesa",
+    7000,
+    "1 taza, del café de tu elección"
+   ],
+   [
+    "V60",
+    10000,
+    "1 taza, del café de tu elección"
+   ],
+   [
+    "AeroPress",
+    10000,
+    "1 taza, del café de tu elección"
+   ],
+   [
+    "Chemex",
+    21000,
+    "3 tazas, del café de tu elección"
+   ],
+   [
+    "Sifón japonés",
+    21000,
+    "3 tazas, del café de tu elección"
+   ]
+  ],
+  "Capuchinos": [
+   [
+    "Capuchino tradicional",
+    8000
+   ],
+   [
+    "Flat white",
+    10000,
+    "Espresso doble con leche cremada"
+   ],
+   [
+    "Mocachino",
+    9000
+   ],
+   [
+    "Capuchino vainilla",
+    9000
+   ],
+   [
+    "Capuchino Semilla de Amor",
+    9500,
+    "Con borde de arequipe de café"
+   ],
+   [
+    "Capuchino avellana",
+    9000,
+    "Con borde de avellana"
+   ],
+   [
+    "Capuchino nucita",
+    10500,
+    "Con borde de nucita"
+   ],
+   [
+    "Capuchino especial",
+    13000,
+    "De vainilla, coronado con crema chantilly"
+   ],
+   [
+    "Capuchino Baileys",
+    14000,
+    "Con crema Baileys"
+   ]
+  ],
+  "Bebidas sin café": [
+   [
+    "Infusión de hierbas aromáticas",
+    5000
+   ],
+   [
+    "Infusión de cáscara de café",
+    9000
+   ],
+   [
+    "Infusión de frutas",
+    9500,
+    "Frutos rojos, lulo o maracuyá"
+   ],
+   [
+    "Milo caliente",
+    8000
+   ],
+   [
+    "Chocolate caliente",
+    8000
+   ],
+   [
+    "Aguapanela",
+    7500
+   ]
+  ],
+  "Lattes": [
+   [
+    "Latte",
+    8000
+   ],
+   [
+    "Latte Semilla de Amor",
+    8500,
+    "Con borde de arequipe de café"
+   ]
+  ]
+ },
+ "Frías": {
+  "Granizados": [
+   [
+    "Granizado Semilla de Amor",
+    13000,
+    "Granizado de café, coronado con crema chantilly"
+   ],
+   [
+    "Granizado arequipe",
+    15500,
+    "Decorado con arequipe de café y coronado con crema chantilly"
+   ],
+   [
+    "Granizado cherry",
+    17500,
+    "Granizado de café con cerezas, coronado con crema chantilly"
+   ],
+   [
+    "Granizado Baileys",
+    19500,
+    "Granizado de café con Baileys, coronado con crema chantilly"
+   ]
+  ],
+  "Malteadas": [
+   [
+    "Malteada de café",
+    15500,
+    "Coronada con crema chantilly"
+   ],
+   [
+    "Malteada de café Choco Pasión",
+    16000,
+    "Con salsa de chocolate Hershey, coronada con crema chantilly"
+   ],
+   [
+    "Malteada de Oreo",
+    17000,
+    "Malteada de café y galletas Oreo, coronada con crema chantilly"
+   ],
+   [
+    "Ice latte",
+    11000
+   ]
+  ],
+  "Otras bebidas frías (sin café)": [
+   [
+    "Jugo natural",
+    8000
+   ],
+   [
+    "Limonada",
+    8000
+   ],
+   [
+    "Limonada de hierbabuena",
+    10000
+   ],
+   [
+    "Limonada frappé de cereza",
+    12000
+   ],
+   [
+    "Frappé de Milo",
+    8000
+   ],
+   [
+    "Soda de maracuyá",
+    14000
+   ],
+   [
+    "Soda de cereza",
+    14000
+   ],
+   [
+    "Soda de lichi con bubols",
+    14000
+   ],
+   [
+    "Soda de lulo",
+    14000
+   ]
+  ]
+ },
+ "Duos": {
+  "Combos del café": [
+   [
+    "Latte con arepa de plátano maduro",
+    14000
+   ],
+   [
+    "2 granizados de café de 9 onzas con un miniwafle",
+    24000
+   ],
+   [
+    "Capuchino tradicional con 2 mini wafles",
+    15000
+   ],
+   [
+    "Capuchino avellana con wafebono",
+    18000
+   ]
+  ]
+ },
+ "Acompañantes": {
+  "Para acompañar": [
+   [
+    "Wafle de pandebono",
+    9500
+   ],
+   [
+    "Wafle especial",
+    16000
+   ],
+   [
+    "Arepa de plátano maduro o de maíz",
+    6500
+   ],
+   [
+    "Sándwich de jamón serrano",
+    20000
+   ],
+   [
+    "Sándwich de pollo y pepinos calados",
+    25000
+   ],
+   [
+    "Sándwich de jamón de cordero, salami y mermelada de tomate",
+    30000
+   ],
+   [
+    "Pitta pizza de jamón serrano o napolitana",
+    18000
+   ],
+   [
+    "Porción de torta (desde)",
+    8000,
+    "Pregunta por las porciones disponibles"
+   ]
+  ]
+ },
+ "Talleres": {
+  "Aprende de café": [
+   [
+    "Taller de introducción al café (individual)",
+    60000
+   ],
+   [
+    "Taller de tueste de café",
+    80000
+   ]
+  ]
+ }
+}

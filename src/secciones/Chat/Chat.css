@@ -1,0 +1,16 @@
+/* Chat */
+.chat-fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.chat{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(78px + env(safe-area-inset-bottom,0px));width:min(370px,calc(100vw - 32px));max-height:min(540px,72vh);display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,.35);z-index:41;overflow:hidden}
+.chat[hidden]{display:none}
+.chat header{background:var(--wine);color:#fff;padding:.9rem 1rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.chat header small{display:block;font-weight:400;opacity:.85;font-size:.75rem}
+.chat header button{background:transparent;border:0;color:inherit;font-size:1.4rem;cursor:pointer;line-height:1}
+.log{padding:.9rem;overflow-y:auto;display:flex;flex-direction:column;gap:.5rem;flex:1;min-height:160px}
+.bubble{max-width:88%;padding:.55rem .85rem;border-radius:var(--radius);font-size:.9rem;overflow-wrap:anywhere;white-space:pre-line}
+.bubble.bot{background:var(--blush);align-self:flex-start}
+.bubble.me{background:var(--wine);color:#fff;align-self:flex-end}
+.quick{display:flex;gap:.35rem;flex-wrap:wrap;padding:0 .9rem .6rem}
+.quick button{font-size:.76rem;background:#fff;border:1px solid var(--wine);color:var(--wine);border-radius:99px;padding:.2rem .7rem;cursor:pointer}
+.chat form{display:flex;gap:.4rem;margin:0;padding:.7rem .9rem;border-top:1px solid var(--line)}
+.chat form input{flex:1}
+

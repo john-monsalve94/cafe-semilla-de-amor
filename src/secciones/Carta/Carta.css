@@ -1,0 +1,18 @@
+/* Carta */
+.menu-layout{display:grid;grid-template-columns:230px 1fr;gap:2.4rem;align-items:start}
+.menu-side{position:sticky;top:96px;display:grid;gap:.8rem}
+.tabs{display:grid;gap:.35rem}
+.tabs button{background:transparent;border:0;border-left:3px solid var(--line);color:var(--muted);text-align:left;padding:.55rem .9rem;cursor:pointer;font-weight:500}
+.tabs button[aria-selected="true"]{border-color:var(--wine);color:var(--wine);background:var(--blush);font-weight:600}
+.groups{column-count:2;column-gap:2.6rem}
+.group{break-inside:avoid;margin-bottom:2rem}
+.group h3{font-size:1.35rem;color:var(--wine);margin-bottom:.4rem;font-style:italic}
+.group ul{list-style:none;margin:0;padding:0}
+.item{display:flex;align-items:baseline;gap:.5rem;padding:.4rem 0}
+.item .name{min-width:0;overflow-wrap:anywhere}
+.item .dots{flex:1;min-width:14px;border-bottom:2px dotted #D8C7BF;transform:translateY(-4px)}
+.item .price{font-variant-numeric:tabular-nums;font-weight:600;color:var(--wine);white-space:nowrap}
+.res-count{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
+
+/* Carta: descripción bajo cada producto */
+.item .name small{display:block;font-size:.76rem;color:var(--muted);line-height:1.35;margin-top:.1rem}

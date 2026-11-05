@@ -1,0 +1,34 @@
+[
+ {
+  "img": "images/sabores/duo-latte-arepa.jpg",
+  "texto": "Latte con arepa de plátano maduro"
+ },
+ {
+  "img": "images/sabores/duo-capuchino-wafles.jpg",
+  "texto": "Capuchino con mini wafles"
+ },
+ {
+  "img": "images/sabores/duo-granizados.jpg",
+  "texto": "Granizados de café con miniwafle"
+ },
+ {
+  "img": "images/sabores/duo-avellana-wafebono.jpg",
+  "texto": "Avellana con wafebono"
+ },
+ {
+  "img": "images/sabores/acomp-wafle-pandebono.jpg",
+  "texto": "Wafle de pandebono"
+ },
+ {
+  "img": "images/sabores/acomp-wafle-especial.jpg",
+  "texto": "Wafle especial"
+ },
+ {
+  "img": "images/sabores/acomp-sandwich-serrano.jpg",
+  "texto": "Sándwich serrano"
+ },
+ {
+  "img": "images/sabores/acomp-arepa.jpg",
+  "texto": "Arepa"
+ }
+]

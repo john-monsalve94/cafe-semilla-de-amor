@@ -1,0 +1,6 @@
+/* Cifras */
+.stats{background:var(--wine-deep);color:#fff}
+.stats .wrap{padding-block:2.6rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem;text-align:center}
+.stat b{display:block;font-family:var(--f-display);font-size:clamp(2.4rem,5vw,3.8rem);color:var(--gold-soft);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.85rem;opacity:.85}
+

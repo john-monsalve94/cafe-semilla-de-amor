@@ -1,0 +1,6 @@
+/* Cinta */
+.marquee{background:var(--band);border-block:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.mq{display:flex;width:max-content;padding-block:.95rem}
+.mq span{display:inline-flex;align-items:center;gap:1.4rem;padding-right:1.4rem;font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.25rem;color:var(--wine)}
+.mq svg{width:26px;height:16px;flex:none}
+

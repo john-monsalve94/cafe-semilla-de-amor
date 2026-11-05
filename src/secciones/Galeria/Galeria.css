@@ -1,0 +1,18 @@
+/* Galería */
+.car{position:relative;overflow:hidden;border-radius:24px}
+.slides{display:flex;transition:transform .7s cubic-bezier(.65,0,.35,1)}
+.slide{flex:0 0 100%;width:100%;min-width:0}
+.car-btn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.94);color:var(--wine);font-size:1.5rem;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.3);z-index:3;line-height:1}
+.car-btn.prev{left:12px}.car-btn.next{right:12px}
+.car-foot{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:.5rem;z-index:3}
+.dots{display:flex;gap:.45rem}
+.dots button{width:11px;height:11px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}
+.dots button[aria-current="true"]{background:#fff;width:30px;border-radius:8px}
+.gal .stage{height:440px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(120deg,#58111A,#3A0A10)}
+.gal .stage::before{content:"";position:absolute;inset:-30px;background:var(--img) center/cover;filter:blur(18px) brightness(.75)}
+.gal .stage:not([style*="--img"])::before{display:none}
+.gal .stage img{position:relative;max-height:78%;margin-bottom:1.4rem;width:auto;max-width:min(92%,380px);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.gal .stage svg{position:relative;height:78%;margin-bottom:1.4rem;width:auto;max-width:100%}
+.gal figure{margin:0;position:relative}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;text-align:center;color:#fff;font-family:var(--f-display);font-style:italic;font-size:1.2rem;background:linear-gradient(transparent,rgba(40,6,10,.75));padding:2.6rem 3.5rem 2.8rem}
+
