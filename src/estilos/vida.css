@@ -1,0 +1,35 @@
+/* Más vida: solo toca fondos, sombras y detalles con los colores de tu paleta.
+   Para quitar todo este efecto, borra la línea  import './estilos/vida.css'  de main.tsx. */
+
+/* ── Fondos con matiz: pasan suavemente de blanco a tonos cálidos ── */
+.band{background:radial-gradient(70% 90% at 100% 0%,rgba(88,17,26,.07),transparent 70%),var(--band)}
+#historia{background:linear-gradient(180deg,#fff 0%,var(--blush) 100%)}
+section:has(> .wrap > .picks){background:radial-gradient(60% 70% at 0% 100%,rgba(184,145,58,.14),transparent 70%),#fff}
+#catalogo{background:linear-gradient(180deg,#fff 0%,#FBF3EE 100%)}
+#guia{background:linear-gradient(180deg,var(--blush) 0%,#fff 55%)}
+#menu{background:radial-gradient(60% 60% at 100% 0%,rgba(88,17,26,.05),transparent 70%),#fff}
+
+/* ── Fotos con velo de color, para dar ambiente de café ── */
+.stats{background:linear-gradient(rgba(58,10,16,.86),rgba(58,10,16,.93)),url(/images/casa/cerezas.jpg) center/cover}
+#visitanos{position:relative;isolation:isolate}
+#visitanos::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(248,243,239,.93),rgba(248,243,239,.88)),url(/images/casa/fachada.jpg) center/cover}
+.tall{position:relative;isolation:isolate;overflow:hidden}
+.tall::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--beans) center/cover;opacity:.08;mix-blend-mode:luminosity}
+footer{background:radial-gradient(80% 120% at 0% 0%,var(--wine-mid),var(--wine-deep) 70%)}
+
+/* ── Tarjetas con relieve y borde teñido ── */
+.pick,.cafe-card,.guia-card,.vcard,.menu-side,.step .ico{border-color:rgba(88,17,26,.12)}
+.pick,.cafe-card,.guia-card,.vcard{box-shadow:0 10px 28px rgba(88,17,26,.10),0 2px 6px rgba(88,17,26,.06);transition:transform .25s,box-shadow .25s}
+.cafe-card:hover,.guia-card:hover,.vcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(88,17,26,.18)}
+.step .ico{box-shadow:0 10px 24px rgba(88,17,26,.14)}
+.card{box-shadow:0 22px 50px rgba(0,0,0,.35)}
+.sabores figure{box-shadow:0 10px 26px rgba(88,17,26,.18)}
+
+/* ── Detalles de color ── */
+.head h2::after{content:"";display:block;width:64px;height:3px;margin:1rem auto 0;border-radius:3px;background:linear-gradient(90deg,var(--wine),var(--gold))}
+h2 em{color:var(--wine-mid)}
+.tall h2 em{color:var(--gold-soft)}
+.kicker{display:inline-flex;align-items:center;justify-content:center;gap:.6rem}
+.head .kicker::before,.head .kicker::after{content:"";width:22px;height:1px;background:var(--gold)}
+.tags span{background:var(--blush)}
+.btn:not(.ghost):not(.line):not(.gold){box-shadow:0 6px 16px rgba(88,17,26,.28)}

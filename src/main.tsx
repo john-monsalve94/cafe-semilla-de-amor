@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import './estilos/base.css'
 import App from './App'
 import './estilos/animaciones.css'
+import './estilos/vida.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

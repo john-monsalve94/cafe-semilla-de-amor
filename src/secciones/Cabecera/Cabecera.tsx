@@ -3,19 +3,24 @@ import { useEffect, useState } from 'react'
 import { img, LOGO } from '../../compartido/utilidades'
 import './Cabecera.css'
 
+
 const ENLACES = [['historia', 'Historia'], ['catalogo', 'Catálogo'], ['pedido', 'Pedido'], ['menu', 'Carta'], ['talleres', 'Talleres'], ['visitanos', 'Visítanos']]
 
 export default function Cabecera() {
   const [abierto, setAbierto] = useState(false)
   const [progreso, setProgreso] = useState(0)
   const [activo, setActivo] = useState('')
-
+  const [arriba, setArriba] = useState(true)
   // Barra de progreso: cuánto de la página llevas leído
-  useEffect(() => {
-    const f = () => { const h = document.documentElement.scrollHeight - innerHeight; setProgreso(h > 0 ? Math.min(100, scrollY / h * 100) : 0) }
-    f(); addEventListener('scroll', f, { passive: true })
-    return () => removeEventListener('scroll', f)
-  }, [])
+useEffect(() => {
+  const f = () => {
+    setArriba(scrollY < 24)
+    const h = document.documentElement.scrollHeight - innerHeight
+    setProgreso(h > 0 ? Math.min(100, scrollY / h * 100) : 0)
+  }
+  f(); addEventListener('scroll', f, { passive: true })
+  return () => removeEventListener('scroll', f)
+}, [])
 
   // Resalta en el menú la sección que estás viendo (solo las que existan en la página)
   useEffect(() => {
@@ -25,7 +30,7 @@ export default function Cabecera() {
   }, [])
 
   return (
-    <header className="top">
+    <header className={'top' + (arriba && !abierto ? ' sobre-portada' : '')}>
       <div className="wrap">
         <a className="brand" href="#inicio"><img src={img(LOGO)} alt="Logo Café Semilla de Amor" /><b>Semilla<br />de Amor Café</b></a>
         <nav className={'main' + (abierto ? ' open' : '')} aria-label="Principal" onClick={e => { if ((e.target as HTMLElement).closest('a')) setAbierto(false) }}>

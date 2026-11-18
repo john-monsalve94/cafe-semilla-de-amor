@@ -26,7 +26,7 @@ export default function App() {
       <Cabecera />
       <main id="inicio">
         <Portada />
-        <Cinta />
+        {/*<Cinta />*/}
         <Recorrido />
         <Cifras />
         <DeLaCasa />

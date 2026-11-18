@@ -5,6 +5,13 @@ export default function Simbolos() {
   return (
     <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true" focusable="false">
       <defs>
+        <linearGradient id="grad-instagram" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FEDA75" />
+          <stop offset="25%" stopColor="#FA7E1E" />
+          <stop offset="50%" stopColor="#D62976" />
+          <stop offset="75%" stopColor="#962FBF" />
+          <stop offset="100%" stopColor="#4F5BD5" />
+        </linearGradient>
         <symbol id="bean" viewBox="0 0 40 24"><ellipse cx="20" cy="12" rx="18" ry="10.5" fill="#4B3621" /><path d="M3 14 Q20 6 37 10" stroke="#2A1D12" fill="none" strokeWidth="2.2" strokeLinecap="round" /></symbol>
         <symbol id="beanl" viewBox="0 0 40 24"><ellipse cx="20" cy="12" rx="18" ry="10.5" fill="#7A2430" /><path d="M3 14 Q20 6 37 10" stroke="#F4E7E8" fill="none" strokeWidth="2.2" strokeLinecap="round" /></symbol>
         <symbol id="logoSym" viewBox="0 0 100 100"><image href={img(LOGO)} width="100" height="100" /></symbol>
