@@ -32,7 +32,7 @@ useEffect(() => {
   return (
     <header className={'top' + (arriba && !abierto ? ' sobre-portada' : '')}>
       <div className="wrap">
-        <a className="brand" href="#inicio"><img src={img(LOGO)} alt="Logo Café Semilla de Amor" /><b>Semilla<br />de Amor Café</b></a>
+        <a className="brand" href="#inicio"><img src={img(LOGO)} alt="Logo Café Semilla de Amor" /><b>Café<br />Semilla de Amor</b></a>
         <nav className={'main' + (abierto ? ' open' : '')} aria-label="Principal" onClick={e => { if ((e.target as HTMLElement).closest('a')) setAbierto(false) }}>
           {ENLACES.map(([id, texto]) => <a key={id} href={'#' + id} aria-current={activo === id}>{texto}</a>)}
         </nav>

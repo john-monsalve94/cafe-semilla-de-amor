@@ -1,5 +1,8 @@
 /* Portada: fondo crema, contenido centrado y arte de granos y hojas */
-.hero{position:relative;overflow:hidden;color:var(--ink);text-align:center;min-height:max(620px,100svh);padding-top:72px;display:flex;align-items:center;background:radial-gradient(90% 80% at 50% 30%,#FFFDF9 0%,#FAF6EC 55%,#F2EEDC 100%)}
+.hero{position:relative;overflow:hidden;color:var(--ink);text-align:center;min-height:max(620px,100svh);padding-top:72px;display:flex;align-items:center;background:
+  radial-gradient(55% 45% at 85% 12%, rgba(231,199,119,.30), transparent 70%),
+  radial-gradient(60% 50% at 10% 90%, rgba(122,36,48,.14), transparent 70%),
+  radial-gradient(90% 80% at 50% 30%, #FFFDF9 0%, #FAF6EC 60%, #F2EEDC 100%)}
 .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding-block:clamp(2rem,5vw,3.5rem) clamp(6rem,12vw,9rem)}
 
 /* Arte: ocupa toda la portada, con los granos abajo y el centro despejado para el texto */

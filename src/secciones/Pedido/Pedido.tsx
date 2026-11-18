@@ -41,7 +41,7 @@ export default function Pedido() {
           <button className="btn ghost" type="button" onClick={() => pedido.agregar('tambo')}>+ Agregar otra variedad</button>
         </div>
         <aside className="ticket" aria-live="polite">
-          <div className="t-head"><img src={img(LOGO)} alt="" /><div><b>Tu pedido</b><small>Semilla de Amor Café</small></div></div>
+          <div className="t-head"><img src={img(LOGO)} alt="" /><div><b>Tu pedido</b><small>Café Semilla de Amor</small></div></div>
           <div>
             <ul>{lineas.map((l, i) => <li key={i}><span>{l.txt}</span><span>{cop(l.sub)}</span></li>)}</ul>
             <div className="sum"><span>Total estimado</span><span>{cop(total)}</span></div>

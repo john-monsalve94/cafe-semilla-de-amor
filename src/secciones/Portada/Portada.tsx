@@ -12,13 +12,13 @@ export default function Portada() {
   return (
     <section className="hero">
       {/* Arte decorativo: no lleva texto, solo adorna */}
-      <img className="arte" src={img('images/marca/arte2.png')} alt="" aria-hidden="true" />
+      {/* <img className="arte" src={img('images/marca/arte2.png')} alt="" aria-hidden="true" /> */}
 
       <span className={'status' + (estado.abierto ? ' open' : '')} aria-live="polite"><span className="dot" /><span>{estado.texto}</span></span>
 
       <div className="wrap">
         <div className="badge-wrap">
-          <svg viewBox="0 0 460 460" role="img" aria-label="Insignia de Semilla de Amor Café, desde 2022">
+          <svg viewBox="0 0 460 460" role="img" aria-label="Insignia de Café Semilla de Amor, desde 2022">
             <g className="ring">
               <path id="ringPath" d="M230,230 m-190,0 a190,190 0 1,1 380,0 a190,190 0 1,1 -380,0" fill="none" />
               <text className="ring-text"><textPath href="#ringPath" textLength="1180" lengthAdjust="spacing">CAFÉ DE ESPECIALIDAD · POPAYÁN · CAUCA · DESDE 2022 · CAFÉ DE ORIGEN ·</textPath></text>
