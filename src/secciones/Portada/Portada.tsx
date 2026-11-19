@@ -1,5 +1,5 @@
-// Portada: logo, título centrado y arte de granos y hojas de café.
-// El arte es public/images/portada/arte.jpg (sin texto): para cambiarlo, reemplaza ese archivo.
+// Portada: foto de fondo (public/images/marca/portada.webp), logo, texto y botones centrados.
+// Para cambiar la foto, reemplaza ese archivo (ideal: menos de 400 KB y el centro despejado).
 import { useEffect, useState } from 'react'
 import { estadoAbierto } from '../../compartido/horario'
 import { img, LOGO } from '../../compartido/utilidades'
@@ -12,7 +12,7 @@ export default function Portada() {
   return (
     <section className="hero">
       {/* Arte decorativo: no lleva texto, solo adorna */}
-      {/* <img className="arte" src={img('images/marca/arte2.png')} alt="" aria-hidden="true" /> */}
+      <img className="arte" src={img('images/marca/fondo.webp')} alt="" aria-hidden="true" />
 
       <span className={'status' + (estado.abierto ? ' open' : '')} aria-live="polite"><span className="dot" /><span>{estado.texto}</span></span>
 
