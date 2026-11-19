@@ -19,8 +19,12 @@
 .badge-wrap > svg{width:100%;height:100%;display:block}
 .ring-text{font-family:var(--f-body);font-weight:600;font-size:21px;fill:var(--wine);letter-spacing:.1em}
 
+.hero h1{font-size:clamp(2.1rem,4vw,4.2rem);color:var(--wine-deep);margin-top:.4rem}
+.hero h1 em{display:block;color:var(--wine-mid)}
 .hero .lead{margin-inline:auto;font-size:clamp(1.05rem,1.3vw,1.6rem);color:var(--brown);max-width:36ch;margin-top:1.1rem}
-.hero .cta{display:flex;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap;justify-content:center}
+.hero .cta{display:flex;gap:1.2rem;margin-top:1.6rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.enlace{color:var(--wine);font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;padding:.6rem .2rem;font-size:clamp(.95rem,1.1vw,1.25rem)}
+.enlace:hover{color:var(--wine-deep);text-decoration-thickness:2.5px}
 .hero .cta .btn{font-size:clamp(.95rem,1.1vw,1.35rem)}
 
 /* Pantallas angostas (≤ 760 px): todo en columna y espacio arriba para la cabecera fija */

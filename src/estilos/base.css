@@ -1,19 +1,20 @@
 /* Estilos del sitio. Los colores y tamaños base están al inicio, en :root */
+/* Dirección visual: «etiqueta de bolsa y papel kraft». Fondo de papel crema, secciones en kraft, vino y dorado de la marca. */
 /* Concepto: "De la semilla a la taza". Portada con insignia giratoria alrededor del logo, cinta de texto en movimiento, recorrido ilustrado en cuatro pasos, catálogo en riel, pedido con tiquete, carta con buscador, talleres sobre vino tinto y pie con la marca en grande. Fondo blanco y paleta de la marca. */
 :root{
-  --bg:#FFFFFF; --band:#F8F3EF; --ink:#000000; --muted:#4B3621; --brown:#4B3621;
-  --wine:#58111A; --wine-mid:#7A2430; --wine-deep:#3A0A10; --blush:#F4E7E8; --line:#E7DBD3;
-  --gold:#B8913A; --gold-soft:#E7C777;
+  --bg:#FBF5EA; --band:#EFE2CC; --card:#FFFCF5; --rosa:#F5E4DA; --ink:#2B1B14; --muted:#4B3621; --brown:#4B3621;
+  --wine:#58111A; --wine-mid:#7A2430; --wine-deep:#3A0A10; --blush:#F3E1DA; --line:#DCCBB3; --borde:#D3BE9F;
+  --gold:#B8913A; --gold-soft:#E7C777; --gold-ink:#7F6120;
   --ok:#2F7A4B; --closed:#E7A08A;
   --f-display:'Playfair Display',Georgia,'Times New Roman',serif;
   --f-body:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --radius:18px; --beans:none; --p:0%;
+  --radius:14px; --ease-out:cubic-bezier(.23,1,.32,1); --beans:none; --p:0%;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;margin:0;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:60}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
 h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
 h2{font-size:clamp(2rem,5vw,3.3rem);color:var(--wine)}
 h2 em,h1 em{font-style:italic;font-weight:600}
@@ -23,6 +24,12 @@ a{color:inherit}
 section .wrap{padding-block:clamp(3.2rem,8vw,6rem)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 button,input,select{font:inherit;color:inherit}
+/* Detalles del navegador con los colores de la marca: selección de texto, cursor, enlaces y barra de desplazamiento */
+::selection{background:var(--gold-soft);color:var(--wine-deep)}
+input,select,textarea{caret-color:var(--wine)}
+::placeholder{color:#7A6755}
+a{text-underline-offset:.2em}
+html{scrollbar-color:var(--wine-mid) var(--band)}
 /* ── Botones ──
    Base vino con brillo sutil arriba y sombra en dos capas teñida del color del botón.
    Al pasar el mouse sube y la sombra crece; al hacer clic se "hunde". */
@@ -30,9 +37,12 @@ button,input,select{font:inherit;color:inherit}
   --sombra:88,17,26;
   background:var(--wine) linear-gradient(180deg,rgba(255,255,255,.14),rgba(0,0,0,.10));
   box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 4px rgba(var(--sombra),.20),0 8px 18px -6px rgba(var(--sombra),.50);
-  transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s,background-color .2s,color .2s,filter .2s}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 4px 8px rgba(var(--sombra),.22),0 14px 28px -8px rgba(var(--sombra),.55)}
-.btn:active{transform:translateY(0);filter:brightness(.97);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 2px rgba(var(--sombra),.25)}
+  transition:transform .16s var(--ease-out),box-shadow .2s var(--ease-out),background-color .2s,color .2s,filter .2s}
+/* El «levantar» al pasar el mouse solo en equipos con mouse; en celular se activaría al tocar */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 4px 8px rgba(var(--sombra),.22),0 14px 28px -8px rgba(var(--sombra),.55)}
+}
+.btn:active{transform:scale(.97);filter:brightness(.97);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 2px rgba(var(--sombra),.25)}
 .btn:focus-visible{outline:none;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--gold)}
 
 .btn.gold{--sombra:184,145,58;background-color:var(--gold-soft);color:var(--wine-deep)}
@@ -50,12 +60,17 @@ button,input,select{font:inherit;color:inherit}
   .btn{transition:none}
   .btn:hover,.btn:active{transform:none}
 }
-.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:600;color:var(--gold)}
-.head{text-align:center;max-width:62ch;margin:0 auto 2.6rem;display:grid;gap:.8rem}
-.head p{color:var(--muted)}
+/* «Sello»: la etiqueta de cada sección va como un sello de bolsa (borde fino, esquinas rectas, apenas inclinado).
+   Queda debajo del título, no encima: así el título es lo primero que se lee. */
+.kicker{justify-self:center;text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;font-weight:600;color:var(--wine);border:1.5px solid currentColor;border-radius:3px;padding:.28rem .8rem;transform:rotate(-1.5deg);order:2}
+/* Sello alineado a la izquierda, para las secciones que no usan el encabezado centrado */
+.kicker.izq{display:inline-block;margin:1rem 0 1.2rem}
+.head{text-align:center;max-width:62ch;margin:0 auto 2.8rem;display:grid;gap:.9rem}
+.head h2{order:1}
+.head p:not(.kicker){color:var(--muted);order:3}
 .band{background:var(--band)}
 
 /* Revelado al hacer scroll: todo es visible en reposo, la animación solo se dispara al entrar */
-@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-.rv.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.rv.in{animation:rise .55s var(--ease-out) both;animation-delay:var(--d,0s)}
 

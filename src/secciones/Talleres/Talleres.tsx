@@ -33,8 +33,8 @@ export default function Talleres() {
   return (
     <section className="tall" id="talleres"><div className="wrap">
       <div>
-        <p className="kicker" style={{ color: 'var(--gold-soft)' }}>Talleres</p>
-        <h2 style={{ marginTop: '.4rem' }}>Aprende de <em>café</em></h2>
+        <h2>Aprende de <em>café</em></h2>
+        <p className="kicker izq" style={{ color: 'var(--gold-soft)' }}>Talleres</p>
         <p className="intro">Dos experiencias para vivir el café de cerca: aprende a probarlo y a tostarlo, guiado por el equipo de Semilla de Amor.</p>
         {TALLERES.map(([nombreTaller, precio]) => (
           <div className="taller" key={nombreTaller}>

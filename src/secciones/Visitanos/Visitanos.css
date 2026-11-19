@@ -1,13 +1,13 @@
 /* Visítanos */
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
-.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;min-width:0}
+.vcard{border-radius:var(--radius);padding:1.9rem;min-width:0}
 .vcard h3{font-size:1.7rem;color:var(--wine);margin-bottom:.8rem}
 table.hours{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
 table.hours td{padding:.5rem 0;border-bottom:1px solid var(--line)}
 table.hours td:last-child{text-align:right}
 table.hours tr.today td{font-weight:600;color:var(--wine)}
 .vlist{display:grid;gap:.9rem}
-.vlist b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold)}
+.vlist b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold-ink)}
 .vlist a{color:var(--wine);font-weight:600}
 .rate{display:inline-flex;align-items:center;gap:.5rem;background:var(--blush);border-radius:99px;padding:.25rem .9rem;font-weight:600;color:var(--wine);font-size:.88rem}
 

@@ -12,11 +12,11 @@ export default function Pie() {
       </div>
       <div style={{display:'flex', justifyContent:'center', gap:'1rem', marginTop:'1rem'}}>
         
-        <a href="https://www.instagram.com/semilladeamorcafe/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/semilladeamorcafe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Café Semilla de Amor">
         <FaInstagram style={{ fill: 'url(#grad-instagram)',width: 'clamp(28px, 6vw, 44px)',height: 'clamp(28px, 6vw, 44px)', }}/> 
         </a>
-        <a href="https://www.tiktok.com/@semilladeamorcafepopayan" target="_blank" rel="noopener noreferrer">
-        <AiFillTikTok  style={{ fill: '#080808', borderRadius: 8 ,width: 'clamp(28px, 6vw, 44px)',height: 'clamp(28px, 6vw, 44px)',}} />
+        <a href="https://www.tiktok.com/@semilladeamorcafepopayan" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Café Semilla de Amor">
+        <AiFillTikTok  style={{ fill: '#E9C9CD', borderRadius: 8 ,width: 'clamp(28px, 6vw, 44px)',height: 'clamp(28px, 6vw, 44px)',}} />
         </a> 
       </div>
       {/* <div className="wordmark" aria-hidden="true">Semilla de Amor</div> */}

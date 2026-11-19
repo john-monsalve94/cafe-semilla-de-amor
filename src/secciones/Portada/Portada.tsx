@@ -34,8 +34,10 @@ export default function Portada() {
           </svg>
         </div>
 
+        <h1>Café del Cauca, <em>de la finca a tu taza.</em></h1>
         <p className="lead">Café de especialidad del Cauca, preparado en el centro de Popayán desde 2022. Cafés filtrados, capuchinos de la casa y café en bolsa para llevar.</p>
-        <div className="cta"><a className="btn gold" href="#menu">Ver la carta</a><a className="btn" href="#pedido">Pedir café en bolsa</a></div>
+        {/* Una acción principal y una secundaria más discreta, para que el visitante sepa por dónde empezar */}
+        <div className="cta"><a className="btn" href="#menu">Ver la carta</a><a className="enlace" href="#pedido">o pide café en bolsa →</a></div>
       </div>
     </section>
   )

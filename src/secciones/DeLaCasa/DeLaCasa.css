@@ -1,13 +1,44 @@
-/* De la casa */
-.picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
-.pick{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:grid;grid-template-rows:auto 1fr auto;gap:.8rem;justify-items:start;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
-.pick:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(88,17,26,.16)}
-.pick::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--wine),var(--gold))}
+/* De la casa: formato revista. Una foto grande y dos más pequeñas, con el texto sobre la foto */
+.picks{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:repeat(2,minmax(290px,auto));gap:1.2rem}
+.pick.grande{grid-row:1 / span 2}
+
+/* Tarjeta sin foto (respaldo con ícono) */
+.pick{border-radius:var(--radius);padding:1.8rem;display:grid;gap:.8rem;justify-items:start;position:relative;overflow:hidden}
 .pick .circ{width:92px;height:92px;border-radius:50%;background:var(--blush);display:grid;place-items:center}
 .pick .circ svg{width:58px;height:58px}
-.pick small{text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;font-size:.72rem}
-.pick h3{font-size:1.45rem;color:var(--wine)}
-.pick .p{font-family:var(--f-display);font-size:1.6rem;color:var(--ink);font-variant-numeric:tabular-nums}
 .pick svg path,.pick svg ellipse,.pick svg rect{fill:none;stroke:var(--wine);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .pick svg .fw{fill:var(--wine);stroke:none}
+.pick small{text-transform:uppercase;letter-spacing:.1em;color:var(--gold-ink);font-weight:600;font-size:.72rem}
+.pick h3{font-size:1.45rem;color:var(--wine)}
+.pick .p{font-family:var(--f-display);font-size:1.6rem;color:var(--ink);font-variant-numeric:tabular-nums}
 
+/* Tarjeta con foto: la foto llena la tarjeta y el texto va abajo, sobre un degradado oscuro para que se lea */
+.pick.con-foto{padding:0;min-height:250px;display:block;isolation:isolate}
+.pick.con-foto .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;transition:transform .6s var(--ease-out)}
+.pick.con-foto .velo{position:absolute;inset:auto 0 0;padding:3rem 1.6rem 1.4rem;display:grid;color:#fff;background:linear-gradient(transparent,rgba(40,6,10,.6) 22%,rgba(40,6,10,.92) 65%)}
+.pick.con-foto small{color:var(--gold-soft)}
+.pick.con-foto h3{color:#fff;font-size:clamp(1.35rem,2vw,1.7rem)}
+.pick.con-foto .p{color:var(--gold-soft);font-size:1.5rem}
+.pick.grande h3{font-size:clamp(1.8rem,3vw,2.5rem)}
+.pick.grande .p{font-size:2rem}
+.pick.con-foto .desc{color:#F5E8E4;font-size:.95rem;margin-top:.5rem;max-width:42ch}
+.pick.con-foto .ver{display:inline-block;margin-top:.6rem;color:#fff;font-weight:600;font-size:.9rem;text-decoration:underline;text-underline-offset:.25em}
+.pick.con-foto .extra > div{overflow:hidden;min-height:0}
+
+/* Con mouse: la descripción aparece al pasar encima o al enfocar el enlace con el teclado, y la foto hace zoom suave.
+   En celular (sin hover) no se oculta nada: la descripción se ve siempre. */
+@media (hover:hover) and (pointer:fine){
+  .pick.con-foto .extra{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .35s var(--ease-out),opacity .25s var(--ease-out)}
+  .pick.con-foto:hover .extra,.pick.con-foto:focus-within .extra{grid-template-rows:1fr;opacity:1}
+  .pick.con-foto:hover .foto,.pick.con-foto:focus-within .foto{transform:scale(1.06)}
+}
+@media (prefers-reduced-motion:reduce){
+  .pick.con-foto .foto,.pick.con-foto .extra{transition:none}
+  .pick.con-foto:hover .foto,.pick.con-foto:focus-within .foto{transform:none}
+}
+
+/* Celular y tablet: una sola columna, con la foto grande primero */
+@media (max-width:900px){
+  .picks{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:minmax(360px,auto)}
+  .pick.grande{grid-row:auto;min-height:480px}
+}

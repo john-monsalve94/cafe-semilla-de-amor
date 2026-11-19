@@ -7,7 +7,7 @@
 .taller{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:1.1rem 1.3rem;margin-bottom:.9rem}
 .taller h3{font-size:1.2rem}
 .taller .pr{font-family:var(--f-display);font-size:1.5rem;color:var(--gold-soft);font-variant-numeric:tabular-nums}
-.card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:1.7rem;min-width:0}
+.card{background:var(--card);color:var(--ink);border-radius:var(--radius);padding:1.7rem;min-width:0}
 .card h3{font-size:1.6rem;color:var(--wine)}
 form.res{display:grid;gap:.8rem;margin-top:1rem}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}

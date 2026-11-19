@@ -3,7 +3,7 @@
 .steps::before{content:"";position:absolute;left:12%;right:12%;top:60px;border-top:2px dashed var(--line)}
 .step{text-align:center;position:relative;padding-inline:.4rem}
 .step .ico{width:120px;height:120px;margin:0 auto;display:block;position:relative;background:#fff;border-radius:50%}
-.step .num{font-family:var(--f-display);font-style:italic;color:var(--gold);font-size:1.1rem;margin-top:.8rem}
+.step .num{font-family:var(--f-display);font-style:italic;color:var(--gold-ink);font-size:1.1rem;margin-top:.8rem}
 .step h3{font-size:1.4rem;color:var(--wine);margin-block:.1rem .4rem}
 .step p{font-size:.9rem;color:var(--muted)}
 .ico path,.ico circle,.ico ellipse{fill:none;stroke:var(--wine);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}

@@ -1,7 +1,7 @@
 /* Guía «¿Cómo elegir tu café ideal?» */
 #guia{border-top:1px solid var(--line)}
 .guia{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
-.guia-card{background:#fff;border:1px solid var(--line);border-top:6px solid var(--c,var(--wine));border-radius:var(--radius);padding:1.4rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;box-shadow:0 6px 20px rgba(88,17,26,.07)}
+.guia-card{background:var(--card);border:1.5px solid color-mix(in srgb,var(--c,var(--wine)) 55%,var(--borde));border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column;gap:.7rem}
 .guia-card .q{font-family:var(--f-display);font-size:1.3rem;font-weight:700;color:var(--wine);line-height:1.2}
 .guia-card p{color:var(--muted);font-size:.95rem}
 .guia-card h3{font-size:1rem;font-family:var(--f-body);font-weight:600;color:var(--ink);margin-top:auto;padding-top:.4rem}

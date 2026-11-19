@@ -8,15 +8,16 @@ export default function Carrusel({ diapositivas, auto, className = '', etiqueta 
   const n = diapositivas.length
   const [i, setI] = useState(0)
   const [pausa, setPausa] = useState(false)
+  const [quieto, setQuieto] = useState(false) // pausa elegida con el botón
   const x0 = useRef<number | null>(null)
   const ir = useCallback((k: number) => setI((k + n) % n), [n])
 
   // Avance automático: se detiene con el mouse encima, con el foco dentro o si la pestaña está oculta
   useEffect(() => {
-    if (!auto || reducirMovimiento || pausa) return
+    if (!auto || reducirMovimiento || pausa || quieto) return
     const t = setInterval(() => { if (!document.hidden) setI(v => (v + 1) % n) }, auto)
     return () => clearInterval(t)
-  }, [auto, pausa, n, i])
+  }, [auto, pausa, quieto, n, i])
 
   return (
     <div className={'car ' + className} aria-roledescription="carrusel" aria-label={etiqueta}
@@ -31,6 +32,7 @@ export default function Carrusel({ diapositivas, auto, className = '', etiqueta 
       </div>
       <button className="car-btn prev" type="button" aria-label="Anterior" onClick={() => ir(i - 1)}>&#8249;</button>
       <button className="car-btn next" type="button" aria-label="Siguiente" onClick={() => ir(i + 1)}>&#8250;</button>
+      {auto && !reducirMovimiento && <button className="car-pausa" type="button" aria-label={quieto ? 'Reanudar el avance automático' : 'Pausar el avance automático'} onClick={() => setQuieto(q => !q)}>{quieto ? '▶' : '❚❚'}</button>}
       <div className="car-foot"><div className="dots">
         {diapositivas.map((_, k) => <button key={k} type="button" aria-label={`Ir a la diapositiva ${k + 1}`} aria-current={k === i} onClick={() => ir(k)} />)}
       </div></div>
