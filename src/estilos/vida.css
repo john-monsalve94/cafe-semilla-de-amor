@@ -32,4 +32,3 @@ h2 em{color:var(--wine-mid)}
 .kicker{display:inline-flex;align-items:center;justify-content:center;gap:.6rem}
 .head .kicker::before,.head .kicker::after{content:"";width:22px;height:1px;background:var(--gold)}
 .tags span{background:var(--blush)}
-.btn:not(.ghost):not(.line):not(.gold){box-shadow:0 6px 16px rgba(88,17,26,.28)}

@@ -1,5 +1,6 @@
-// Portada: foto de fondo (public/images/marca/portada.webp), logo, texto y botones centrados.
-// Para cambiar la foto, reemplaza ese archivo (ideal: menos de 400 KB y el centro despejado).
+// Portada: foto de fondo, insignia con el logo, texto y botones centrados.
+// Fotos (public/images/marca/): fondo.webp (computador), fondo-movil-limpia.webp (426–760 px)
+// y fondo-movil.webp (≤ 425 px, con el logo en la taza; ahí la insignia se oculta con CSS).
 import { useEffect, useState } from 'react'
 import { estadoAbierto } from '../../compartido/horario'
 import { img, LOGO } from '../../compartido/utilidades'
@@ -11,8 +12,12 @@ export default function Portada() {
 
   return (
     <section className="hero">
-      {/* Arte decorativo: no lleva texto, solo adorna */}
-      <img className="arte" src={img('images/marca/fondo.webp')} alt="" aria-hidden="true" />
+      {/* Foto de fondo: el navegador usa el primer <source> que cumpla con el ancho de la pantalla */}
+      <picture>
+        <source media="(max-width:425px)" srcSet={img('images/marca/fondo-movil.webp')} />
+        <source media="(max-width:760px)" srcSet={img('images/marca/fondo-movil-limpia.webp')} />
+        <img className="arte" src={img('images/marca/fondo.webp')} alt="" aria-hidden="true" />
+      </picture>
 
       <span className={'status' + (estado.abierto ? ' open' : '')} aria-live="polite"><span className="dot" /><span>{estado.texto}</span></span>
 
@@ -28,10 +33,9 @@ export default function Portada() {
             <image href={img(LOGO)} x="102" y="102" width="256" height="256" />
           </svg>
         </div>
-        
+
         <p className="lead">Café de especialidad del Cauca, preparado en el centro de Popayán desde 2022. Cafés filtrados, capuchinos de la casa y café en bolsa para llevar.</p>
         <div className="cta"><a className="btn gold" href="#menu">Ver la carta</a><a className="btn" href="#pedido">Pedir café en bolsa</a></div>
-        
       </div>
     </section>
   )

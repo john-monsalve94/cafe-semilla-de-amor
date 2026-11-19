@@ -2,29 +2,39 @@
 .hero{position:relative;overflow:hidden;color:var(--ink);text-align:center;min-height:max(620px,100svh);padding-top:12px;display:flex;align-items:center;background:radial-gradient(90% 80% at 50% 30%,#FFFDF9 0%,#FAF6EC 55%,#F2EEDC 100%)}
 .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding-block:clamp(2rem,5vw,3.5rem)}
 
-/* Foto: ocupa toda la portada; el centro queda despejado para el texto */
+/* Foto: ocupa toda la portada. <picture> no ocupa espacio propio, así el <img> se ubica respecto a .hero */
+.hero picture{display:contents}
 .arte{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center bottom;pointer-events:none;user-select:none}
 
+/* Velo claro detrás del texto para que se lea bien sobre la foto */
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(42% 50% at 50% 48%,rgba(255,250,242,.6),transparent 75%)}
+
+/* Aviso de abierto/cerrado */
 .status{position:absolute;z-index:3;top:calc(72px + 1rem);left:max(16px,2vw);display:inline-flex;align-items:center;gap:.55rem;font-weight:500;font-size:clamp(.82rem,.9vw,1.05rem);padding:.4rem .95rem;border:1px solid rgba(88,17,26,.18);border-radius:99px;background:rgba(255,255,255,.75);color:var(--brown)}
 .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--closed)}
 .status.open .dot{background:#2FA862;box-shadow:0 0 0 4px rgba(47,168,98,.22)}
 
+/* Insignia giratoria con el logo */
 .hero .badge-wrap{position:relative;width:clamp(240px,20vw,440px);aspect-ratio:1;margin:0 auto 1.1rem}
 .badge-wrap > svg{width:100%;height:100%;display:block}
 .ring-text{font-family:var(--f-body);font-weight:600;font-size:21px;fill:var(--wine);letter-spacing:.1em}
 
-.hero h1{font-size:clamp(2.4rem,5.5vw,6.5rem);font-weight:800;color:var(--wine);letter-spacing:-.01em;max-width:16ch;margin:0 auto}
-.hero h1 em{color:var(--wine-mid)}
-.hero .lead{font-size:clamp(1.05rem,1.3vw,1.6rem);color:var(--brown);max-width:36ch;margin-top:1.1rem}
+.hero .lead{margin-inline:auto;font-size:clamp(1.05rem,1.3vw,1.6rem);color:var(--brown);max-width:36ch;margin-top:1.1rem}
 .hero .cta{display:flex;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap;justify-content:center}
 .hero .cta .btn{font-size:clamp(.95rem,1.1vw,1.35rem)}
-.hero .mini{position:absolute;left:0;right:0;bottom:1.3rem;margin:0;font-size:clamp(.9rem,1vw,1.15rem);color:#fff;text-shadow:0 0 8px rgba(0,0,0,.85),0 1px 3px rgba(0,0,0,.9);font-weight:500}
 
+/* Pantallas angostas (≤ 760 px): todo en columna y espacio arriba para la cabecera fija */
 @media (max-width:760px){
+  .hero{flex-direction:column;align-items:stretch;padding-top:84px}
   .hero .wrap{padding-bottom:3rem}
   .status{position:static;margin:1rem auto 0}
-  .hero{flex-direction:column;align-items:stretch}
 }
 
-/* Velo claro detrás del texto para que se lea bien sobre la foto */
-.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(42% 50% at 50% 48%,rgba(255,250,242,.6),transparent 75%)}
+/* Celular (≤ 425 px): sin insignia (el logo va en la taza de la foto).
+   El aviso, el texto y los botones se centran juntos, como un solo bloque, sobre la taza */
+@media (max-width:425px){
+  .hero .badge-wrap{display:none}
+  .hero{justify-content:center;padding-bottom:40svh}
+  .hero .lead{margin-bottom:2rem}
+  .hero .wrap{padding-block:1.25rem 0}
+}

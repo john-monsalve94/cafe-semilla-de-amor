@@ -23,12 +23,33 @@ a{color:inherit}
 section .wrap{padding-block:clamp(3.2rem,8vw,6rem)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 button,input,select{font:inherit;color:inherit}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--wine);color:#fff;border:0;border-radius:99px;padding:.8rem 1.6rem;font-weight:600;cursor:pointer;text-decoration:none;font-size:.95rem}
-.btn.light{background:#fff;color:var(--wine)}
-.btn.gold{background:var(--gold-soft);color:var(--wine-deep)}
-.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.75)}
-.btn.ghost{background:transparent;color:var(--wine);border:1.5px solid var(--wine)}
-.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* ── Botones ──
+   Base vino con brillo sutil arriba y sombra en dos capas teñida del color del botón.
+   Al pasar el mouse sube y la sombra crece; al hacer clic se "hunde". */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;color:#fff;border:0;border-radius:99px;padding:.8rem 1.6rem;font-weight:600;cursor:pointer;text-decoration:none;font-size:.95rem;
+  --sombra:88,17,26;
+  background:var(--wine) linear-gradient(180deg,rgba(255,255,255,.14),rgba(0,0,0,.10));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 4px rgba(var(--sombra),.20),0 8px 18px -6px rgba(var(--sombra),.50);
+  transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s,background-color .2s,color .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 4px 8px rgba(var(--sombra),.22),0 14px 28px -8px rgba(var(--sombra),.55)}
+.btn:active{transform:translateY(0);filter:brightness(.97);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 2px rgba(var(--sombra),.25)}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--gold)}
+
+.btn.gold{--sombra:184,145,58;background-color:var(--gold-soft);color:var(--wine-deep)}
+.btn.light{--sombra:0,0,0;background-color:#fff;color:var(--wine)}
+/* Botones de solo borde: sin relleno ni sombra; al pasar el mouse se rellenan */
+.btn.ghost,.btn.line{background:transparent;box-shadow:none}
+.btn.ghost{color:var(--wine);border:1.5px solid var(--wine)}
+.btn.ghost:hover{background-color:var(--wine);color:#fff;box-shadow:0 8px 18px -8px rgba(88,17,26,.45)}
+.btn.line{color:#fff;border:1.5px solid rgba(255,255,255,.75)}
+.btn.line:hover{background-color:rgba(255,255,255,.12)}
+
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none;filter:none}
+
+@media (prefers-reduced-motion:reduce){
+  .btn{transition:none}
+  .btn:hover,.btn:active{transform:none}
+}
 .kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:600;color:var(--gold)}
 .head{text-align:center;max-width:62ch;margin:0 auto 2.6rem;display:grid;gap:.8rem}
 .head p{color:var(--muted)}

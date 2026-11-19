@@ -1,8 +1,7 @@
 // Barra superior: logo, menú, barra de progreso de lectura y menú móvil
-import { useEffect, useState } from 'react'
-import { img, LOGO } from '../../compartido/utilidades'
+import { useEffect, useRef, useState } from 'react'
+import { img, LOGO, vars } from '../../compartido/utilidades'
 import './Cabecera.css'
-
 
 const ENLACES = [['historia', 'Historia'], ['catalogo', 'Catálogo'], ['pedido', 'Pedido'], ['menu', 'Carta'], ['talleres', 'Talleres'], ['visitanos', 'Visítanos']]
 
@@ -11,16 +10,28 @@ export default function Cabecera() {
   const [progreso, setProgreso] = useState(0)
   const [activo, setActivo] = useState('')
   const [arriba, setArriba] = useState(true)
+  const cabecera = useRef<HTMLElement>(null)
+
   // Barra de progreso: cuánto de la página llevas leído
-useEffect(() => {
-  const f = () => {
-    setArriba(scrollY < 24)
-    const h = document.documentElement.scrollHeight - innerHeight
-    setProgreso(h > 0 ? Math.min(100, scrollY / h * 100) : 0)
-  }
-  f(); addEventListener('scroll', f, { passive: true })
-  return () => removeEventListener('scroll', f)
-}, [])
+  useEffect(() => {
+    const f = () => {
+      setArriba(scrollY < 24)
+      const h = document.documentElement.scrollHeight - innerHeight
+      setProgreso(h > 0 ? Math.min(100, scrollY / h * 100) : 0)
+    }
+    f(); addEventListener('scroll', f, { passive: true })
+    return () => removeEventListener('scroll', f)
+  }, [])
+
+  // Menú abierto en celular: se cierra con Esc o tocando fuera de la cabecera
+  useEffect(() => {
+    if (!abierto) return
+    const tecla = (e: KeyboardEvent) => { if (e.key === 'Escape') setAbierto(false) }
+    const fuera = (e: PointerEvent) => { if (!cabecera.current?.contains(e.target as Node)) setAbierto(false) }
+    addEventListener('keydown', tecla)
+    addEventListener('pointerdown', fuera)
+    return () => { removeEventListener('keydown', tecla); removeEventListener('pointerdown', fuera) }
+  }, [abierto])
 
   // Resalta en el menú la sección que estás viendo (solo las que existan en la página)
   useEffect(() => {
@@ -30,13 +41,15 @@ useEffect(() => {
   }, [])
 
   return (
-    <header className={'top' + (arriba && !abierto ? ' sobre-portada' : '')}>
+    <header ref={cabecera} className={'top' + (arriba && !abierto ? ' sobre-portada' : '')}>
       <div className="wrap">
         <a className="brand" href="#inicio"><img src={img(LOGO)} alt="Logo Café Semilla de Amor" /><b>Café<br />Semilla de Amor</b></a>
-        <nav className={'main' + (abierto ? ' open' : '')} aria-label="Principal" onClick={e => { if ((e.target as HTMLElement).closest('a')) setAbierto(false) }}>
-          {ENLACES.map(([id, texto]) => <a key={id} href={'#' + id} aria-current={activo === id}>{texto}</a>)}
+        <nav id="menu-principal" className={'main' + (abierto ? ' open' : '')} aria-label="Principal" onClick={e => { if ((e.target as HTMLElement).closest('a')) setAbierto(false) }}>
+          {ENLACES.map(([id, texto], i) => <a key={id} href={'#' + id} aria-current={activo === id} style={vars({ '--i': String(i) })}>{texto}</a>)}
         </nav>
-        <button className="nav-toggle" type="button" aria-expanded={abierto} onClick={() => setAbierto(!abierto)}>Menú</button>
+        <button className="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded={abierto} aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'} onClick={() => setAbierto(!abierto)}>
+          <span /><span /><span />
+        </button>
       </div>
       <div className="progress" aria-hidden="true" style={{ width: progreso + '%' }} />
     </header>

@@ -1,7 +1,5 @@
 /* Animaciones continuas */
 @media (prefers-reduced-motion:no-preference){
-  .btn{transition:transform .15s,box-shadow .15s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
   .ring{animation:spin 45s linear infinite;transform-origin:230px 230px}
   .fl svg{animation:bob 5s ease-in-out infinite}
   .fl:nth-child(odd) svg{animation-duration:6.5s;animation-direction:reverse}
@@ -38,9 +36,5 @@
   .row .del{grid-column:1/-1}
   .rail-btn{display:none}
   .gal .stage{height:360px}
-  .nav-toggle{display:inline-block}
-  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:.5rem max(16px,env(safe-area-inset-left,0px)) 1rem}
-  nav.main.open{display:flex}
-  nav.main a{padding:.7rem 0;border-bottom:1px solid var(--line)}
 }
 
