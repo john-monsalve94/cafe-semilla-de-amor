@@ -6,14 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Sitio web de una sola página para Café Semilla de Amor (cafetería en Popayán, Colombia). React 18 + TypeScript + Vite, sin router, sin backend y sin framework de CSS. Publicado en Vercel. **Todo el código, los nombres, los comentarios, los archivos y los mensajes de commit están en español**: hay que mantenerlo así. El README está escrito para la dueña, que no es programadora, así que los comentarios en el código deben ser sencillos y explicativos, con ese mismo estilo.
 
-Responde siempre al usuario en español.
+## Zonas delicadas
 
-## Cómo trabajar con John
-
-- Explícale a John cada cambio en pocas palabras y por qué se hace, porque está aprendiendo.
-- No toques la lógica del carrito ni el botón de WhatsApp sin avisar primero. Eso incluye:
-  - Carrito: `src/compartido/pedidoStore.ts` y el cálculo del total en `src/secciones/Pedido/Pedido.tsx`.
-  - WhatsApp: el enlace `wa.me` de `Pedido.tsx` («Enviar por WhatsApp»), el de la reserva en `src/secciones/Talleres/Talleres.tsx` y `PHONE` en `src/datos/negocio.json`.
+No toques la lógica del carrito ni el botón de WhatsApp sin avisar primero. Eso incluye:
+- Carrito: `src/compartido/pedidoStore.ts` y el cálculo del total en `src/secciones/Pedido/Pedido.tsx`.
+- WhatsApp: el enlace `wa.me` de `Pedido.tsx` («Enviar por WhatsApp»), el de la reserva en `src/secciones/Talleres/Talleres.tsx` y `PHONE` en `src/datos/negocio.json`.
 
 ## Comandos
 
