@@ -34,20 +34,26 @@ export default function Pedido() {
                 <label htmlFor={`o-q${k}`}>Cantidad
                   <input id={`o-q${k}`} type="number" min={1} max={50} value={f.qty} onChange={e => pedido.cambiar(k, { qty: Math.max(1, Math.min(50, Number(e.target.value) || 1)) })} />
                 </label>
-                <button className="btn ghost del" type="button" disabled={filas.length === 1} onClick={() => pedido.quitar(k)}>Quitar</button>
+                <button className="btn ghost del" type="button" onClick={() => pedido.quitar(k)}>Quitar</button>
               </div>
             ))}
           </div>
-          <button className="btn ghost" type="button" onClick={() => pedido.agregar('tambo')}>+ Agregar otra variedad</button>
+          <button className="btn ghost" type="button" onClick={() => pedido.agregar('tambo')}>{filas.length === 0 ? '+ Agregar un café' : '+ Agregar otra variedad'}</button>
         </div>
         <aside className="ticket" aria-live="polite">
           <div className="t-head"><img src={img(LOGO)} alt="" /><div><b>Tu pedido</b><small>Café Semilla de Amor</small></div></div>
           <div>
-            <ul>{lineas.map((l, i) => <li key={i}><span>{l.txt}</span><span>{cop(l.sub)}</span></li>)}</ul>
-            <div className="sum"><span>Total estimado</span><span>{cop(total)}</span></div>
+            {filas.length === 0
+              ? <p className="vacio">Aún no has elegido café. Agrégalo desde el catálogo o con el botón «Agregar un café».</p>
+              : <>
+                  <ul>{lineas.map((l, i) => <li key={i}><span>{l.txt}</span><span>{cop(l.sub)}</span></li>)}</ul>
+                  <div className="sum"><span>Total estimado</span><span>{cop(total)}</span></div>
+                </>}
             <small className="fine">Precios de la carta. No incluye envío; se confirma por WhatsApp.</small>
           </div>
-          <a className="btn" href={`https://wa.me/${NEGOCIO.PHONE}?text=${encodeURIComponent(mensaje)}`} target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+          {filas.length === 0
+            ? <button className="btn" type="button" disabled>Enviar por WhatsApp</button>
+            : <a className="btn" href={`https://wa.me/${NEGOCIO.PHONE}?text=${encodeURIComponent(mensaje)}`} target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>}
         </aside>
       </div>
     </div></section>
